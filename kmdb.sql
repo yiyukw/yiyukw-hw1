@@ -68,10 +68,25 @@
 
 -- Drop existing tables, so you'll start fresh each time this script is run.
 -- TODO!
+DROP TABLE IF EXISTS movies;
+DROP TABLE IF EXISTS topcast;
 
 -- Create new tables, according to your domain model
+-- movie title, year released, MPAA rating,
+--   and director
 -- TODO!
+CREATE TABLE movies(
+movie_name TEXT,
+release_year INTEGER PRIMARY KEY,
+rating TEXT,
+director TEXT
+);
 
+CREATE TABLE topcast(
+    movie_name TEXT,
+    top_cast TEXT,
+    movie_role TEXT
+);
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
