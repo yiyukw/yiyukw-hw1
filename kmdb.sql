@@ -69,35 +69,34 @@
 -- Drop existing tables, so you'll start fresh each time this script is run.
 -- TODO!
 DROP TABLE IF EXISTS movies;
-DROP TABLE IF EXISTS cast;
+DROP TABLE IF EXISTS casts;
 
 -- Create new tables, according to your domain model
--- movie title, year released, MPAA rating,
---   and director
+
 -- TODO!
 CREATE TABLE movies(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    movie_name TEXT,
-    release_year TEXT,
+    moviename TEXT,
+    releaseyear TEXT,
     rating TEXT,
     director TEXT
 );
 
-CREATE TABLE cast(
+CREATE TABLE casts(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    movie_name TEXT,
-    top_cast TEXT,
-    movie_role TEXT
+    moviename TEXT,
+    topcast TEXT,
+    movierole TEXT
 );
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
-INSERT INTO movies (movie_name, release_year, rating, director)
+INSERT INTO movies (moviename, releaseyear, rating, director)
 VALUES ('Batman Begins', '2005', 'PG-13', 'Christopher Nolan'),
 ('The Dark Knight', '2008', 'PG-13', 'Christopher Nolan'),
 ('The Dark Knight Rises','2012','PG-13','Christopher Nolan');
 
-INSERT INTO cast(movie_name, top_cast, movie_role)
+INSERT INTO casts (moviename, topcast, movierole)
 VALUES ('Batman Begins','Christian Bale','Bruce Wayne'), 
 ('Batman Begins','Michael Caine','Alfred'),
 ('Batman Begins','Liam Neeson','Ras Al Ghul'),
@@ -120,6 +119,7 @@ VALUES ('Batman Begins','Christian Bale','Bruce Wayne'),
 .print "======"
 .print ""
 
+SELECT movie_name, release_year, rating, director FROM Movies
 
 -- The SQL statement for the movies output
 -- TODO!
