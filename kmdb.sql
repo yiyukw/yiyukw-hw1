@@ -119,11 +119,12 @@ VALUES ('Batman Begins','Christian Bale','Bruce Wayne'),
 .print "======"
 .print ""
 
-SELECT movie_name, release_year, rating, director FROM Movies
+
 
 -- The SQL statement for the movies output
 -- TODO!
-SELECT movie_name,release_year,rating,director FROM movies
+SELECT moviename, releaseyear, rating, director FROM Movies
+
 -- Prints a header for the cast output
 .print ""
 .print "Top Cast"
@@ -133,3 +134,4 @@ SELECT movie_name,release_year,rating,director FROM movies
 
 -- The SQL statement for the cast output
 -- TODO!
+SELECT moviename,topcast,movierole FROM movies
