@@ -100,7 +100,7 @@ VALUES ('Batman Begins', '2005', 'PG-13', 'Christopher Nolan'),
 INSERT INTO cast(movie_name, top_cast, movie_role)
 VALUES ('Batman Begins','Christian Bale','Bruce Wayne'), 
 ('Batman Begins','Michael Caine','Alfred'),
-('Batman Begins','Liam Neeson','Ra's Al Ghul'),
+('Batman Begins','Liam Neeson','Ras Al Ghul'),
 ('Batman Begins','Katie Holmes','Rachel Dawes'),
 ('Batman Begins','Gary Oldman','Commissioner Gordon'),
 ('The Dark Knight','Christian Bale','Bruce Wayne'),
