@@ -68,21 +68,23 @@
 
 -- Drop existing tables, so you'll start fresh each time this script is run.
 -- TODO!
-DROP TABLE IF EXISTS movies;
-DROP TABLE IF EXISTS topcast;
+DROP TABLE IF EXISTS movie;
+DROP TABLE IF EXISTS cast;
 
 -- Create new tables, according to your domain model
 -- movie title, year released, MPAA rating,
 --   and director
 -- TODO!
 CREATE TABLE movies(
-movie_name TEXT,
-release_year INTEGER PRIMARY KEY,
-rating TEXT,
-director TEXT
+    id INTEGER PRIMARY KEY AUTOINCREMENT
+    movie_name TEXT,
+    release_year INTEGER PRIMARY KEY,
+    rating TEXT,
+    director TEXT
 );
 
-CREATE TABLE topcast(
+CREATE TABLE cast(
+    id INTEGER PRIMARY KEY AUTOINCREMENT
     movie_name TEXT,
     top_cast TEXT,
     movie_role TEXT
@@ -94,6 +96,24 @@ INSERT INTO movies (movie_name, release_year, rating, director)
 VALUES ('Batman Begins', '2005', 'PG-13', 'Christopher Nolan'),
 ('The Dark Knight', '2008', 'PG-13', 'Christopher Nolan'),
 ('The Dark Knight Rises','2012','PG-13','Christopher Nolan');
+
+INSERT INTO cast (movie_name, top_cast, movie_role);
+VALUES ('Batman Begins','Christian Bale','Bruce Wayne'),
+('Batman Begins','Michael Caine','Alfred'),
+('Batman Begins','Liam Neeson','Ra's Al Ghul'),
+('Batman Begins','Katie Holmes','Rachel Dawes'),
+('Batman Begins','Gary Oldman','Commissioner Gordon'),
+('The Dark Knight','Christian Bale','Bruce Wayne'),
+('The Dark Knight','Heath Ledger','Joker'),
+('The Dark Knight','Aaron Eckhart','Harvey Dent'),
+('The Dark Knight','Michael Caine','Alfred'),
+('The Dark Knight','Maggie Gyllenhaal','Rachel Dawes'),
+('The Dark Knight Rises','Christian Bale','Bruce Wayne'),
+('The Dark Knight Rises','Gary Oldman','Commissioner Gordon'),
+('The Dark Knight Rises','Tom Hardy','Bane'),
+('The Dark Knight Rises','Joseph Gordon-Levitt','John Blake'),
+('The Dark Knight Rises','Anne Hathaway','Selina Kyle'),
+
 
 -- Prints a header for the movies output
 .print "Movies"
