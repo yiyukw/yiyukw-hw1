@@ -76,15 +76,15 @@ DROP TABLE IF EXISTS cast;
 --   and director
 -- TODO!
 CREATE TABLE movies(
-    id INTEGER PRIMARY KEY AUTOINCREMENT
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     movie_name TEXT,
-    release_year INTEGER PRIMARY KEY,
+    release_year TEXT,
     rating TEXT,
     director TEXT
 );
 
 CREATE TABLE cast(
-    id INTEGER PRIMARY KEY AUTOINCREMENT
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     movie_name TEXT,
     top_cast TEXT,
     movie_role TEXT
@@ -97,8 +97,8 @@ VALUES ('Batman Begins', '2005', 'PG-13', 'Christopher Nolan'),
 ('The Dark Knight', '2008', 'PG-13', 'Christopher Nolan'),
 ('The Dark Knight Rises','2012','PG-13','Christopher Nolan');
 
-INSERT INTO cast (movie_name, top_cast, movie_role);
-VALUES ('Batman Begins','Christian Bale','Bruce Wayne'),
+INSERT INTO cast(movie_name, top_cast, movie_role)
+VALUES ('Batman Begins','Christian Bale','Bruce Wayne'), 
 ('Batman Begins','Michael Caine','Alfred'),
 ('Batman Begins','Liam Neeson','Ra's Al Ghul'),
 ('Batman Begins','Katie Holmes','Rachel Dawes'),
@@ -119,6 +119,7 @@ VALUES ('Batman Begins','Christian Bale','Bruce Wayne'),
 .print "Movies"
 .print "======"
 .print ""
+
 
 -- The SQL statement for the movies output
 -- TODO!
